@@ -11,8 +11,6 @@ class nfi_stats(PluginBase):
     types = ['ip','ip6']
 
     def setup(self):
-        if not self.plugin_config:
-            return False
         self.base_url = self.plugin_config['base_url']
         self.url = self.base_url + "stats?ip="
 
